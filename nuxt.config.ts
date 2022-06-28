@@ -13,7 +13,11 @@ export default defineNuxtConfig({
             "Nuxt 3 & Tailwind 3 version of Forkify App from Jonas Schmedtmann's JavaScript Course.",
         },
         // Open Graph Thumbnail
-        { property: 'og:image', content: 'image placeholder' },
+        {
+          property: 'og:image',
+          content:
+            'https://github.com/MuhammadM1998/Food-Hut/tree/main/public/Website-Screenshot.png',
+        },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '627' },
         { property: 'og:title', content: 'Food Hut' },

@@ -6,7 +6,7 @@ Nuxt 3 & Tailwind 3 version of Forkify App from Jonas Schmedtmann's JavaScript C
 
 ### 🔗 Links
 
-- [Live Site]()
+- [Live Site](https://foodhut.vercel.app/)
 - [Source Repo](https://github.com/MuhammadM1998/Food-Hut)
 
 ### ‍💻 Stack

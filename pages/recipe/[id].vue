@@ -20,12 +20,6 @@
 
     Object.assign(recipe, response);
     isLoading.value = false;
-    console.log(recipe.title);
-  });
-
-  onMounted(() => {
-    // console.log(recipe);
-    // console.log(recipe.image_url);
   });
 
   useHead({

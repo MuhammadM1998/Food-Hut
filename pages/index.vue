@@ -24,7 +24,7 @@
           <p>People trust us</p>
         </div>
 
-        <h1 class="mb-4 text-5xl font-bold dark:text-white">
+        <h1 class="mb-4 text-5xl font-bold dark:text-white lg:leading-tight">
           We're <span class="text-red">Serious</span> For
           <span class="text-red">Food</span> &
           <span class="delivery">Delivery</span>.

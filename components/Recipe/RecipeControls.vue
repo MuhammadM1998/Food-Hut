@@ -1,5 +1,7 @@
 <template>
-  <div class="flex items-center justify-between">
+  <div
+    class="flex items-center justify-between gap-4 lg:justify-center lg:gap-72"
+  >
     <div class="flex items-center gap-4 md:gap-12">
       <div class="flex items-center gap-2">
         <NuxtIcon name="clock" class="text-lg md:text-xl text-red" />

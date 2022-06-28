@@ -20,9 +20,4 @@
   const toggleMobileNav = () => {
     isMobileNavVisible.value = !isMobileNavVisible.value;
   };
-
-  // // Search
-  // const searchForItem = (item) => {
-  //   console.log('header', item);
-  // };
 </script>

@@ -3,12 +3,8 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Food Hut',
-
-      htmlAttrs: {
-        lang: 'en',
-      },
-
+      titleTemplate: 'Food Hut - %s',
+      htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
@@ -16,14 +12,29 @@ export default defineNuxtConfig({
           content:
             "Nuxt 3 & Tailwind 3 version of Forkify App from Jonas Schmedtmann's JavaScript Course.",
         },
+        // Open Graph Thumbnail
+        { property: 'og:image', content: 'image placeholder' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '627' },
+        { property: 'og:title', content: 'Food Hut' },
+        {
+          property: 'og:description',
+          content:
+            "Nuxt 3 & Tailwind 3 version of Forkify App from Jonas Schmedtmann's JavaScript Course.",
+        },
+        { property: 'og:type', content: 'website' },
       ],
-      script: [{ src: 'https://unpkg.com/flowbite@1.4.7/dist/flowbite.js' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/public/favicon.ico' },
+      ],
     },
   },
+
   modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-icons'],
 
-  // Important to make the dark mode works
   colorMode: {
+    preference: 'system',
+    fallback: 'light', // fallback value if not system preference found
     classSuffix: '',
   },
 });

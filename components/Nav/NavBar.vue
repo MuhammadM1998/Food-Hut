@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-menu" :class="{ 'nav-menu--visible': isVisible }">
-    <NavSearchBar />
+    <SearchBar />
 
     <ul class="flex flex-col gap-4 text-center">
       <li><NavAddRecipe /></li>

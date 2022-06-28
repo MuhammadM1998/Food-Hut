@@ -22,11 +22,11 @@
 </template>
 
 <script setup>
+  const { navigateToSearch } = useRecipes();
   const searchInput = ref('');
 
-  const emit = defineEmits(['searchClicked']);
-
-  const submitForm = (e) => {
-    emit('searchClicked', searchInput.value);
+  const submitForm = () => {
+    navigateToSearch(searchInput.value);
+    searchInput.value = '';
   };
 </script>

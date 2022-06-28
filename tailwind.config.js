@@ -1,12 +1,7 @@
 module.exports = {
   darkMode: 'class',
 
-  content: [
-    './index.html',
-    './app.vue',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-    './node_modules/flowbite/**/*.js',
-  ],
+  content: ['./index.html', './app.vue', './src/**/*.{vue,js,ts,jsx,tsx}'],
 
   theme: {
     container: {
@@ -53,6 +48,10 @@ module.exports = {
 
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+      },
+
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
       },
     },
   },

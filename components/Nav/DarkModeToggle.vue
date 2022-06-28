@@ -3,7 +3,7 @@
     <button
       class="text-red"
       @click="toggleColorMode('light')"
-      v-show="colorMode.preference === 'dark'"
+      v-show="colorMode.value === 'dark'"
       type="button"
       aria-label="Switch to light mode"
     >
@@ -13,7 +13,7 @@
     <button
       class="text-yellow"
       @click="toggleColorMode('dark')"
-      v-show="colorMode.preference === 'light'"
+      v-show="colorMode.value === 'light'"
       type="button"
       aria-label="Switch to dark mode"
     >
@@ -26,6 +26,6 @@
   const colorMode = useColorMode();
 
   const toggleColorMode = (newMode) => {
-    colorMode.preference = newMode;
+    colorMode.value = newMode;
   };
 </script>

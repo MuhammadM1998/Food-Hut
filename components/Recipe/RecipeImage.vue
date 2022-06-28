@@ -1,7 +1,10 @@
+<script setup>
+  const props = defineProps({
+    imageUrl: { type: String, required: true },
+    imageAlt: { type: String, required: true },
+  });
+</script>
+
 <template>
-  <img
-    class="max-h-[550px]"
-    src="http://forkify-api.herokuapp.com/images/salad_booster9ce2.jpg"
-    alt=""
-  />
+  <img class="max-h-[550px] mx-auto" :src="imageUrl" :alt="imageAlt" />
 </template>

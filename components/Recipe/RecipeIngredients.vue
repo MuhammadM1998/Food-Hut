@@ -1,3 +1,9 @@
+<script setup>
+  const props = defineProps({
+    ingredients: { type: Array, required: true },
+  });
+</script>
+
 <template>
   <div class="flex flex-col gap-4 py-4 lg:items-center">
     <h2 class="text-xl font-semibold text-center text-yellow">
@@ -5,24 +11,9 @@
     </h2>
 
     <ul class="ingredients-list">
-      <li class="ingredient">
+      <li class="ingredient" v-for="item in ingredients" :key="item">
         <NuxtIcon name="check" class="icon" />
-        <p>1 medium head cauliflower cut into florets</p>
-      </li>
-
-      <li class="ingredient">
-        <NuxtIcon name="check" class="icon" />
-        <p>1/2 cup mozzarella shredded</p>
-      </li>
-
-      <li class="ingredient">
-        <NuxtIcon name="check" class="icon" />
-        <p>Salt and pepper to taste</p>
-      </li>
-
-      <li class="ingredient">
-        <NuxtIcon name="check" class="icon" />
-        <p>1 cup chicken cooked and shredded</p>
+        <p class="max-w-sm">{{ item }}</p>
       </li>
     </ul>
   </div>

@@ -1,3 +1,16 @@
+<script setup>
+  // Meta Data
+  useHead({
+    title: `Find Your Next Amazing Recipes`,
+    meta: [
+      {
+        name: 'description',
+        content: 'Food Hut Home Page, Find Your Next Amazing Recipes',
+      },
+    ],
+  });
+</script>
+
 <template>
   <section class="pt-2 pb-8">
     <div
@@ -17,28 +30,26 @@
           <span class="delivery">Delivery</span>.
         </h1>
 
-        <!-- <img src="assets/images/text-decore.png" alt="" /> -->
-
         <p class="text-gray-100 dark:text-white">
           Best cooks and best delivery guys all at your service. Hot tasty food
           will reach you in 60 minutes.
         </p>
 
-        <NavSearchBar />
+        <SearchBar />
       </div>
 
       <div class="grid lg:basis-full place-content-center">
         <picture>
           <source
             media="(max-width: 1023px)"
-            srcset="assets/images/happy-client-mobile.png"
+            srcset="assets/images/happy-client-mobile.webp"
           />
           <source
             media="(min-width: 1024px)"
-            srcset="assets/images/happy-client-desktop.png"
+            srcset="assets/images/happy-client-desktop.webp"
           />
           <img
-            src="assets/images/happy-client-mobile.png"
+            src="assets/images/happy-client-mobile.webp"
             alt="One of our happy clients"
           />
         </picture>

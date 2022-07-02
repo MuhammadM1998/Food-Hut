@@ -11,9 +11,17 @@
     </h2>
 
     <ul class="ingredients-list">
-      <li class="ingredient" v-for="item in ingredients" :key="item">
+      <li
+        class="ingredient"
+        v-for="ingredient in ingredients"
+        :key="ingredient.id"
+      >
         <NuxtIcon name="check" class="icon" />
-        <p class="max-w-sm">{{ item }}</p>
+        <p class="max-w-sm">
+          {{ ingredient.measures.us.amount }}
+          {{ ingredient.measures.us.unitShort }}
+          {{ ingredient.originalName }}
+        </p>
       </li>
     </ul>
   </div>

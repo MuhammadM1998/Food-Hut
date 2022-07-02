@@ -9,7 +9,7 @@ const useRecipes = () => {
   };
 
   const searchRecipesByName = async (recipeName) => {
-    const recipes = await $fetch('/api/forkify/search', {
+    const recipes = await $fetch('/api/spoonacular/search', {
       params: { recipeName },
     });
 
@@ -17,7 +17,7 @@ const useRecipes = () => {
   };
 
   const getRecipeDetailsByID = async (recipeID) => {
-    const { recipe: recipeDetails } = await $fetch('/api/forkify/recipe', {
+    const recipeDetails = await $fetch('/api/spoonacular/recipe', {
       params: { recipeID },
     });
 

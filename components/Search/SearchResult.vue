@@ -3,18 +3,18 @@
 </script>
 
 <template>
-  <NuxtLink :to="`/recipe/${recipe.recipe_id}`">
+  <NuxtLink :to="`/recipe/${recipe.id}`">
     <div class="recipe">
       <img
         class="recipe-image"
-        :src="recipe.image_url"
-        :alt="recipe.name"
+        :src="recipe.image"
+        :alt="recipe.title"
         loading="lazy"
       />
 
       <div class="flex flex-col gap-2">
         <h4 class="recipe-name">{{ recipe.title }}</h4>
-        <p class="recipe-publisher">{{ recipe.publisher }}</p>
+        <p class="recipe-publisher">{{ recipe.sourceName || 'Spoonacular' }}</p>
       </div>
     </div>
   </NuxtLink>
@@ -22,7 +22,7 @@
 
 <style scoped lang="scss">
   .recipe {
-    @apply flex flex-row md:flex-col items-center gap-4 px-4 py-4 rounded-lg bg-recipe-item-gradient-mobile md:bg-recipe-item-gradient-desktop  text-left md:text-center;
+    @apply flex flex-row md:flex-col items-center gap-4 px-4 py-4 rounded-lg bg-recipe-item-gradient-mobile md:bg-recipe-item-gradient-desktop  text-left md:text-center min-h-[13rem];
 
     &-image {
       @apply md:-translate-y-12 rounded-full  w-28 h-28 border-4 border-transparent bg-image-border-gradient bg-origin-border object-cover transition-transform min-w-[7rem];

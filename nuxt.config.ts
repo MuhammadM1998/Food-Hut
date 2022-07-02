@@ -58,4 +58,8 @@ export default defineNuxtConfig({
     fallback: 'light', // fallback value if not system preference found
     classSuffix: '',
   },
+
+  runtimeConfig: {
+    apiKey: process.env.API_KEY,
+  },
 });

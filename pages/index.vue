@@ -1,7 +1,7 @@
 <script setup>
   // Meta Data
   useHead({
-    title: `Find Your Next Amazing Recipes`,
+    title: `Find Your Next Amazing Recipe`,
     meta: [
       {
         name: 'description',

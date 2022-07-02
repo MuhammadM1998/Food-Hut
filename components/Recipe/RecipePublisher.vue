@@ -1,7 +1,6 @@
 <script setup>
   const props = defineProps({
     publisherName: { type: String, required: true },
-    publisherUrl: { type: String, required: true },
     directionsUrl: { type: String, required: true },
   });
 </script>
@@ -14,9 +13,9 @@
 
     <p class="text-sm text-gray-100 dark:text-white">
       This recipe was carefully designed and tested by
-      <a :href="publisherUrl" target="_blank" class="font-semibold text-red">
+      <span class="font-semibold text-red">
         {{ publisherName }}
-      </a>
+      </span>
       . Please check out directions at their website.
     </p>
 

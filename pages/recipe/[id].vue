@@ -46,13 +46,15 @@
 
       <div v-else class="flex flex-col gap-4">
         <h1 class="recipe-name">{{ recipe.title }}</h1>
-        <RecipeImage :image-url="recipe.image_url" :image-alt="recipe.title" />
-        <RecipeControls />
-        <RecipeIngredients :ingredients="recipe.ingredients" />
+        <RecipeImage :image-url="recipe.image" :image-alt="recipe.title" />
+        <RecipeControls
+          :minutes="recipe.readyInMinutes"
+          :servings="recipe.servings"
+        />
+        <RecipeIngredients :ingredients="recipe.extendedIngredients" />
         <RecipePublisher
-          :publisher-name="recipe.publisher"
-          :publisher-url="recipe.publisher_url"
-          :directions-url="recipe.source_url"
+          :publisher-name="recipe.sourceName || 'Spoonacular'"
+          :directions-url="recipe.sourceUrl"
         />
       </div>
     </div>

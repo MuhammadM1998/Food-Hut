@@ -6,7 +6,14 @@ export default defineNuxtConfig({
       titleTemplate: 'Food Hut - %s',
       htmlAttrs: { lang: 'en' },
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/public/favicon.ico' },
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href:
+            process.env.NODE_ENV === 'development'
+              ? '/public/favicon.ico'
+              : '/favicon.ico',
+        },
       ],
 
       meta: [
@@ -28,10 +35,10 @@ export default defineNuxtConfig({
         {
           property: 'og:image',
           content:
-            'https://github.com/MuhammadM1998/Food-Hut/raw/main/public/Website-Screenshot.png',
+            'https://res.cloudinary.com/cloud-m98/image/upload/c_scale,h_630,q_40,w_1200/v1656823565/Food%20Hut/Website-Screenshot_hrbeqp.png',
         },
         { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '627' },
+        { property: 'og:image:height', content: '630' },
         // Twitter Meta Tags
         { name: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:domain', content: 'https://foodhut.vercel.app' },

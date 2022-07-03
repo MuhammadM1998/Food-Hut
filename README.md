@@ -2,7 +2,7 @@
 
 Nuxt 3 & Tailwind 3 version of Forkify App from Jonas Schmedtmann's JavaScript Course.
 
-![Website Mockup](./public/Website-Screenshot.png)
+![Website Mockup](https://res.cloudinary.com/cloud-m98/image/upload/c_scale,h_630,q_40,w_1200/v1656823565/Food%20Hut/Website-Screenshot_hrbeqp.png)
 
 ### 🔗 Links
 

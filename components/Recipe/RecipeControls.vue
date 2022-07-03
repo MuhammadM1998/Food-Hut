@@ -3,6 +3,26 @@
     minutes: { type: Number, required: true },
     servings: { type: Number, required: true },
   });
+
+  const emit = defineEmits(['update:minutes', 'update:servings']);
+
+  const minServings = 2;
+  const maxServings = 6;
+  const minutesPerServing = Math.ceil(props.minutes / props.servings);
+
+  const increaseServings = () => {
+    const newMinutesValue = props.minutes + minutesPerServing;
+    const newServingsValue = props.servings + 1;
+    emit('update:minutes', newMinutesValue);
+    emit('update:servings', newServingsValue);
+  };
+
+  const decreaseServings = () => {
+    const newMinutesValue = props.minutes - minutesPerServing;
+    const newServingsValue = props.servings - 1;
+    emit('update:minutes', newMinutesValue);
+    emit('update:servings', newServingsValue);
+  };
 </script>
 
 <template>
@@ -26,6 +46,8 @@
         <button
           class="transition-transform text-red hover:-translate-y-px"
           aria-label="Decrease People Served"
+          @click="decreaseServings"
+          v-if="servings > minServings"
         >
           <NuxtIcon name="minus-circle" />
         </button>
@@ -33,6 +55,8 @@
         <button
           class="transition-transform text-red hover:-translate-y-px"
           aria-label="Increase People Served"
+          @click="increaseServings"
+          v-if="servings < maxServings"
         >
           <NuxtIcon name="plus-circle" />
         </button>

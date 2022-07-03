@@ -1,6 +1,21 @@
 <script setup>
   const props = defineProps({
-    ingredients: { type: Array, required: true },
+    ingredientsList: { type: Array, required: true },
+    minutes: { type: Number, required: true },
+    servings: { type: Number, required: true },
+  });
+
+  const initialServings = props.servings;
+
+  const ingredients = computed(() => {
+    return props.ingredientsList.map((item) => {
+      return {
+        id: item.id,
+        amount: Math.ceil(props.servings * (item.amount / initialServings)),
+        unit: item.unit,
+        originalName: item.originalName,
+      };
+    });
   });
 </script>
 
@@ -18,8 +33,8 @@
       >
         <NuxtIcon name="check" class="icon" />
         <p class="max-w-sm">
-          {{ ingredient.measures.us.amount }}
-          {{ ingredient.measures.us.unitShort }}
+          {{ ingredient.amount }}
+          {{ ingredient.unit }}
           {{ ingredient.originalName }}
         </p>
       </li>

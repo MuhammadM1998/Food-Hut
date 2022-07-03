@@ -17,7 +17,6 @@
       return;
     }
 
-    console.log(response);
     isRecipesFound.value = true;
     Object.assign(recipes, response);
     isLoading.value = false;

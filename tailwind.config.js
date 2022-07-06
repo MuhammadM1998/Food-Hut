@@ -44,6 +44,8 @@ module.exports = {
           'linear-gradient(180deg, transparent -5%, rgb(245, 71, 72) 300%)',
         'image-border-gradient':
           'linear-gradient(transparent, transparent), linear-gradient(rgb(253, 197, 94), rgb(245, 71, 72))',
+        'search-bookmarks-gradient':
+          'linear-gradient(90deg, transparent -150%, rgb(245, 71, 72) 300%)',
       },
 
       fontFamily: {

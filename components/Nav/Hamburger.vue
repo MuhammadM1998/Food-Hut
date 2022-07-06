@@ -1,9 +1,9 @@
 <template>
   <button
     type="button"
-    class="text-3xl dark:text-white"
+    class="text-3xl dark:text-white text-red"
     aria-label="Expand Menu"
   >
-    <NuxtIcon name="hamburger" />
+    <NuxtIcon name="search" class="text-red" />
   </button>
 </template>

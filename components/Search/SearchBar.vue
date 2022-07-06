@@ -1,8 +1,15 @@
+<script setup>
+  const { navigateToSearch } = useRecipes();
+  const searchInput = ref('');
+
+  const submitForm = () => {
+    navigateToSearch(searchInput.value);
+    searchInput.value = '';
+  };
+</script>
+
 <template>
-  <form
-    class="flex transition-all focus-within:drop-shadow-md focus-within:-translate-y-0.5"
-    @submit.prevent="submitForm"
-  >
+  <form @submit.prevent="submitForm">
     <input
       type="text"
       class="block w-full p-2 transition-colors border-2 border-r-0 border-gray-100 rounded-l-lg outline-none focus:border-black dark:border-transparent"
@@ -21,12 +28,8 @@
   </form>
 </template>
 
-<script setup>
-  const { navigateToSearch } = useRecipes();
-  const searchInput = ref('');
-
-  const submitForm = () => {
-    navigateToSearch(searchInput.value);
-    searchInput.value = '';
-  };
-</script>
+<style scoped>
+  form {
+    @apply flex transition-all focus-within:drop-shadow-md focus-within:-translate-y-0.5 bg-no-repeat bg-red-graident-light dark:bg-search-bookmarks-gradient bg-pale-white dark:bg-gray-300 md:bg-transparent md:bg-none md:dark:bg-transparent md:dark:bg-none;
+  }
+</style>

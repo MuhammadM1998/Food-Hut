@@ -52,6 +52,7 @@
         <RecipeControls
           v-model:minutes="recipe.readyInMinutes"
           v-model:servings="recipe.servings"
+          :recipe="recipe"
         />
 
         <RecipeIngredients

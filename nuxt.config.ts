@@ -69,7 +69,12 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-icons'],
+  modules: [
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
+    'nuxt-icons',
+    '@pinia/nuxt',
+  ],
 
   colorMode: {
     preference: 'system',

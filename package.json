@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/MuhammadM1998/Food-Hut"
   },
-  "homepage": "",
+  "homepage": "https://foodhut.vercel.app/",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -25,10 +25,9 @@
     "sass-loader": "^13.0.1"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.1.9",
-    "@vueuse/components": "^8.7.5",
-    "@vueuse/core": "^8.7.5",
     "axios": "^0.27.2",
-    "pinia": "^2.0.14"
+    "pinia": "^2.0.14",
+    "@pinia/nuxt": "^0.1.9",
+    "@vueuse/core": "^8.7.5"
   }
 }

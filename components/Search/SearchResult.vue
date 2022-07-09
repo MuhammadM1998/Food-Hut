@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <NuxtLink :to="`/recipe/${recipe.id}`">
+  <NuxtLink :to="`/recipe/${recipe.id}`" no-prefetch>
     <div class="recipe">
       <img
         class="recipe-image"

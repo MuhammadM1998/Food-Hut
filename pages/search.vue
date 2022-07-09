@@ -52,7 +52,7 @@
       >
         <NuxtIcon name="no-results" class="mx-auto text-9xl text-red" />
 
-        <p class="text-2xl font-bold text-gray-200 dark:text-white">
+        <p class="text-2xl font-bold text-center text-gray-200 dark:text-white">
           {{ errorMessage }}
         </p>
       </div>

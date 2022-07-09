@@ -44,15 +44,18 @@
           <picture>
             <source
               media="(max-width: 1023px)"
-              srcset="assets/images/happy-client-mobile.webp"
+              srcset="~/assets/images/happy-client-mobile.webp"
+              loading="lazy"
             />
             <source
               media="(min-width: 1024px)"
-              srcset="assets/images/happy-client-desktop.webp"
+              srcset="~/assets/images/happy-client-desktop.webp"
+              loading="lazy"
             />
             <img
-              src="assets/images/happy-client-mobile.webp"
+              src="~/assets/images/happy-client-mobile.webp"
               alt="One of our happy clients"
+              loading="lazy"
             />
           </picture>
         </div>
@@ -65,8 +68,9 @@
     >
       <div>
         <img
-          src="assets/images/chef-holding-food.webp"
+          src="~/assets/images/chef-holding-food.webp"
           alt="Chef holding food"
+          loading="lazy"
         />
       </div>
 
@@ -130,8 +134,9 @@
     >
       <div>
         <img
-          src="assets/images/chef-holding-mobile.webp"
+          src="~/assets/images/chef-holding-mobile.webp"
           alt="Chef holding food"
+          loading="lazy"
         />
       </div>
 
@@ -150,7 +155,7 @@
         <div class="flex gap-4">
           <a href="#" aria-label="Google Play">
             <img
-              src="assets/images/Google-Play.png"
+              src="~/assets/images/Google-Play.png"
               alt="Google Play"
               loading="lazy"
             />
@@ -158,7 +163,7 @@
 
           <a href="#" aria-label="App Store">
             <img
-              src="assets/images/App-Store.png"
+              src="~/assets/images/App-Store.png"
               alt="App Store"
               loading="lazy"
             />

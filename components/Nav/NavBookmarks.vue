@@ -30,6 +30,7 @@
       ref="bookmarksButton"
       class="flex items-center gap-2 p-2 rounded-lg group"
       @click="toggleBookmarks"
+      aria-label="Bookmarks"
     >
       <NuxtIcon name="bookmark" class="text-2xl text-red" />
     </button>

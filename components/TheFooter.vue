@@ -5,11 +5,11 @@
         <Logo class="w-fit lg:-mt-4 lg:mx-auto" />
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor
+          The perfect place for you to find your next amazing recipe! Start
+          exploring your next meal now!
         </p>
 
-        <ul class="flex gap-4 mt-4">
+        <ul class="flex gap-4 mt-4 text-xl lg:mx-auto">
           <li>
             <a href="#" aria-label="facebook">
               <NuxtIcon
@@ -84,19 +84,20 @@
       </div>
 
       <div class="flex flex-col col-span-2 gap-4">
-        <h3 class="text-2xl font-bold text-red">Get in touch</h3>
+        <h3 class="text-2xl font-bold text-red">Newsletter</h3>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor
+          Join our newsletter and get amazing recipes that will make lose your
+          mind!. What are you waiting for? Can't you hear your belly? Join us
+          now!
         </p>
 
-        <div class="flex gap-4">
+        <form class="flex gap-4">
           <input
             class="px-6 py-4 bg-[#E8E8E8] rounded-full text-gray-200 outline-none placeholder:text-gray-100 w-[60%]"
             type="email"
             aria-label="Email"
-            placeholder="email"
+            placeholder="Email"
           />
 
           <button
@@ -105,7 +106,7 @@
           >
             Subscribe
           </button>
-        </div>
+        </form>
       </div>
     </div>
   </section>

@@ -60,7 +60,9 @@
     </section>
 
     <!-- Features -->
-    <section class="flex flex-col gap-6 py-12 md:flex-row md:items-center">
+    <section
+      class="flex flex-col gap-6 py-12 md:flex-row md:items-center md:gap-40"
+    >
       <div>
         <img
           src="assets/images/chef-holding-food.webp"
@@ -68,7 +70,7 @@
         />
       </div>
 
-      <div class="container flex flex-col gap-6">
+      <div class="container flex flex-col max-w-4xl gap-6 ml-0">
         <h2 class="text-5xl font-bold dark:text-white lg:leading-tight">
           We are <span class="text-red">more</span> than
           <span class="text-yellow">multiple</span> service
@@ -124,7 +126,7 @@
 
     <!-- Mobile Apps -->
     <section
-      class="flex flex-col gap-6 py-12 md:flex-row-reverse md:items-center"
+      class="flex flex-col gap-6 py-12 md:flex-row-reverse md:items-center md:gap-40"
     >
       <div>
         <img
@@ -133,7 +135,7 @@
         />
       </div>
 
-      <div class="container flex flex-col gap-6">
+      <div class="container flex flex-col max-w-4xl gap-6 ml-0">
         <h2 class="text-5xl font-bold dark:text-white lg:leading-tight">
           It's Now <span class="text-red">More Easy</span> to
           <span class="text-yellow">Order</span> by Our Mobile App
@@ -174,6 +176,11 @@
 </style>
 
 <style>
+  body,
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-no-repeat bg-red-graident-light dark:bg-red-graident-dark bg-pale-white dark:bg-gray-300 transition-colors font-poppins;
   }

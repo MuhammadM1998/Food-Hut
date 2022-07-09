@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="min-h-[70vh] grid place-content-center">
+  <div class="min-h-[65vh] grid place-content-center">
     <NuxtIcon
       name="loader"
       class="loader"

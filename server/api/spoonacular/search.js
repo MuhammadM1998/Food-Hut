@@ -6,6 +6,18 @@ export default defineEventHandler(async (e) => {
   const { recipeName } = useQuery(e.req);
 
   try {
+    if (!recipeName) {
+      const newError = new Error();
+      newError.response = {
+        data: {
+          code: 404,
+          message:
+            "There's no meal with no name! Enter a name and search again.",
+        },
+      };
+      throw newError;
+    }
+
     const { data: recipesList } = await axios.get(searchEndpoint, {
       params: {
         query: recipeName,
@@ -17,12 +29,27 @@ export default defineEventHandler(async (e) => {
       },
     });
 
+    if (recipesList.totalResults === 0) {
+      const newError = new Error();
+      newError.response = {
+        data: {
+          code: 404,
+          message:
+            "Sorry. We couldn't find the recipe you searched for in our database.",
+        },
+      };
+      throw newError;
+    }
+
     return recipesList;
-  } catch (error) {
+  } catch (err) {
     return {
       error: true,
-      statusCode: '404',
-      message: `Sorry. We couldn't find the recipe you searched for in our database.`,
+      statusCode: err.response.data.code,
+      message:
+        err.response.data.code === 402
+          ? "The site's daily limit of 150 search requests has been exceeded. Please try again tomorrow."
+          : err.response.data.message,
     };
   }
 });

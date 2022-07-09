@@ -4,27 +4,39 @@
 
   // Fetching Recipes
   const { searchRecipesByName } = useRecipes();
-  const { recipeName } = useRoute().query;
+  const route = useRoute();
   const isRecipesFound = ref(false);
+  const errorMessage = ref('');
   const recipes = reactive({});
+  const recipeName = computed(() => route.query.recipeName);
 
-  onBeforeMount(async () => {
-    isLoading.value = true;
-    const response = await searchRecipesByName(recipeName);
+  watch(
+    recipeName,
+    async (value) => {
+      isLoading.value = true;
+      const response = await searchRecipesByName(value);
 
-    if (response.error) {
-      isRecipesFound.value = false;
+      if (response.error) {
+        isRecipesFound.value = false;
+        Object.assign(recipes, {});
+        errorMessage.value = response.message;
+      } else {
+        isRecipesFound.value = true;
+        Object.assign(recipes, response);
+        errorMessage.value = '';
+      }
+
+      isLoading.value = false;
       return;
+    },
+    {
+      immediate: true,
     }
-
-    isRecipesFound.value = true;
-    Object.assign(recipes, response);
-    isLoading.value = false;
-  });
+  );
 
   // Meta Data
   useHead({
-    title: `Search for ${recipeName} `,
+    title: `Search for ${route.query.recipeName} `,
     meta: [{ name: 'description', content: 'Food Hut Search Page' }],
   });
 </script>
@@ -34,10 +46,15 @@
     <Spinner v-if="isLoading" :is-activated="isLoading" />
 
     <div v-else>
-      <div v-if="!isRecipesFound" class="grid place-content-center">
-        <h1 class="text-2xl font-bold text-gray-200 dark:text-white">
-          Sorry. We couldn't find the recipe you searched for in our database.
-        </h1>
+      <div
+        v-if="!isRecipesFound"
+        class="container min-h-[65vh] grid place-content-center gap-6"
+      >
+        <NuxtIcon name="no-results" class="mx-auto text-9xl text-red" />
+
+        <p class="text-2xl font-bold text-gray-200 dark:text-white">
+          {{ errorMessage }}
+        </p>
       </div>
 
       <div v-else class="container">

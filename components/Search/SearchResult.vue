@@ -13,7 +13,7 @@
       />
 
       <div class="flex flex-col gap-2">
-        <h4 class="recipe-name">{{ recipe.title }}</h4>
+        <p class="recipe-name">{{ recipe.title }}</p>
         <p class="recipe-publisher">{{ recipe.sourceName || 'Spoonacular' }}</p>
       </div>
     </div>

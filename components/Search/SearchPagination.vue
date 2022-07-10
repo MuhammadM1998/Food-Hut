@@ -31,9 +31,10 @@
     <div class="text-white pagination-controls">
       <div class="pagination-buttons">
         <button
-          class="pagination-button"
-          @click="currentPage--"
           v-if="previousPage"
+          @click="currentPage--"
+          class="pagination-button"
+          aria-label="Previous Page"
         >
           <NuxtIcon name="arrow-Left" />
         </button>
@@ -41,9 +42,10 @@
         <p class="text-yellow">Page {{ currentPage }} of {{ numberOfPages }}</p>
 
         <button
-          class="pagination-button"
-          @click="currentPage++"
           v-if="nextPage <= numberOfPages"
+          @click="currentPage++"
+          class="pagination-button"
+          aria-label="Next Page"
         >
           <NuxtIcon name="arrow-Right" />
         </button>

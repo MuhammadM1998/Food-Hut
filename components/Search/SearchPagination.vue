@@ -8,8 +8,10 @@
 
   // Pagination
   const resultsPerPage = ref(10);
-  const numberOfPages = Math.round(recipesCount / resultsPerPage.value);
   const currentPage = ref(1);
+  const numberOfPages = computed(() =>
+    Math.round(recipesCount / resultsPerPage.value)
+  );
   const nextPage = computed(() => currentPage.value + 1);
   const previousPage = computed(() => currentPage.value - 1);
   const startIndex = computed(

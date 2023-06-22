@@ -19,7 +19,7 @@
     >
       <NuxtIcon
         name="404"
-        fill
+        filled
         class="text-[12rem] lg:text-[40rem] scale-[2.5] lg:scale-150"
       />
 

@@ -5,21 +5,21 @@
         <NuxtIcon
           v-if="colorMode.value === 'light'"
           name="Food-Hut-Logo-Dark"
-          fill
+          filled
           class="text-7xl sm:text-8xl md:text-9xl"
         />
 
         <NuxtIcon
           v-if="colorMode.value === 'dark'"
           name="Food-Hut-Logo-Light"
-          fill
+          filled
           class="text-7xl sm:text-8xl md:text-9xl"
         />
       </NuxtLink>
 
       <template #placeholder>
         <img
-          src="~/public/favicon.ico"
+          src="/favicon.ico"
           alt="Food Hut Logo"
           class="w-[72px] h-[72px] sm:w-[96px] sm:h-[96px] md:w-[128px] md:h-[128px]"
         />

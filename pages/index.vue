@@ -22,7 +22,7 @@
           <div
             class="flex items-center gap-2 px-2 py-1 bg-[#FDDDDD] w-fit rounded-full"
           >
-            <NuxtIcon name="Heart" fill class="text-lg" />
+            <NuxtIcon name="Heart" filled class="text-lg" />
             <p>People trust us</p>
           </div>
 
@@ -90,17 +90,17 @@
           class="grid grid-cols-1 gap-4 font-medium md:grid-cols-2 dark:text-white"
         >
           <li class="flex items-center gap-2">
-            <NuxtIcon name="shopping" fill class="text-3xl" />
+            <NuxtIcon name="shopping" filled class="text-3xl" />
             <p>Online Order</p>
           </li>
 
           <li class="flex items-center gap-2">
-            <NuxtIcon name="24-hours" fill class="text-3xl" />
+            <NuxtIcon name="24-hours" filled class="text-3xl" />
             <p>24/7 Service</p>
           </li>
 
           <li class="flex items-center gap-2">
-            <NuxtIcon name="chef" fill class="text-3xl" />
+            <NuxtIcon name="chef" filled class="text-3xl" />
             <p>Super Chef</p>
           </li>
 

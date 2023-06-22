@@ -1,5 +1,4 @@
 <script setup>
-  // Meta Data
   useHead({
     title: `Page Not Found`,
     meta: [
@@ -36,8 +35,9 @@
         <NuxtLink
           to="/"
           class="px-8 py-3 text-white transition-opacity rounded-full lg:m-0 lg:mt-12 w-fit bg-red hover:opacity-90"
-          >Go Back</NuxtLink
         >
+          Go Back
+        </NuxtLink>
       </div>
     </section>
   </div>

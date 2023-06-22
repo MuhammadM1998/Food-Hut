@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt';
-
 export default defineNuxtConfig({
   app: {
     head: {
@@ -9,10 +7,7 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href:
-            process.env.NODE_ENV === 'development'
-              ? '/public/favicon.ico'
-              : '/favicon.ico',
+          href: '/favicon.ico',
         },
       ],
 
